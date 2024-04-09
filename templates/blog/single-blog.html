@@ -1,74 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="UTF-8">
-    <title>Single Blog | Safs - HTML</title>
-
-    <!-- ====== Google Fonts ====== -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
-
-    <!-- ====== ALL CSS ====== -->
-    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/lightbox.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
-
-</head>
-
-<body data-spy="scroll" data-target=".navbar-nav">
-    <!-- ====== Header ====== -->
-    <header id="header" class="header"> <!-- ====== Navbar ====== -->
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand logo" href="index.html">
-                    <img src="{% static 'assets/images/logo.png" alt="logo">
-                </a>
-                <!-- // Logo -->
-
-                <!-- Mobile Menu -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"><span><i class="fa fa-bars"></i></span></button>
-                <!-- Mobile Menu -->
-
-                <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="blog.html">BLOG</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- ====== // Navbar ====== -->
-
-        <!-- Page Title -->
-        <div class="page-title bg-img section-padding bg-overlay" style="background-image: url('{% static 'assets/images/breadcrumb.jpg' %}')">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <h2>Single Blog</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- // Page Title -->
-    </header>
-    <!-- ====== // Header ====== -->
-
-
-
+{% extends 'blog-base.html'%}
+{% load static %}
+{% block content%}
     <section class="blog-section">
         <div class="container">
             <div class="row">
                 <!-- Blog Main Content -->
                 <div class="col-lg-8">
                     <div class="blog-post">
-                        <img src="{% static 'assets/images/blog/img-1.jpg'%}" alt="" class="blog-img">
+                        <img src="{% static 'assets/images/blog/img-1.jpg' %}" alt="" class="blog-img">
                         <h4 class="blog-title"><a href="#">Safs is Full Responsive Web site Template</a></h4>
                         <p class="blog-meta"><a class="user-name" href="#">AL Mamun</a><span class="blog-date">22 FEB 2018</span><a href="#" class="blog-comment">Comments (05)</a></p>
                         <div class="blog-main-content">
@@ -176,7 +115,7 @@
                                         </div>
                                     </div>
                                     <p><input type="text" placeholder="Website"></p>
-                                    <p><textarea name=" id=" placeholder="Your Comments" required></textarea></p>
+                                    <p><textarea name="" id="" placeholder="Your Comments" required></textarea></p>
                                     <div class="comment-btn text-center">
                                         <button class="button" type="submit">Comment Now</button>
                                     </div>
@@ -226,7 +165,7 @@
                                 <li>
                                     <span style="background-image: url('{% static 'assets/images/blog/img-1.jpg' %}')"></span>
                                     <div class="blog-content">
-                                        <a href="single-blog.html">Lorem ipsum dolor sit amet onsectetur adipisicing elit.</a>
+                                        <a href="{% url 'blog:single-blog' %}">Lorem ipsum dolor sit amet onsectetur adipisicing elit.</a>
                                         <div class="blog-date">22 FEB 2018</div>
                                     </div>
                                 </li>
@@ -235,7 +174,7 @@
                                 <li>
                                     <span style="background-image: url('{% static 'assets/images/blog/img-2.jpg' %}')"></span>
                                     <div class="blog-content">
-                                        <a href="single-blog.html">Lorem ipsum dolor sit amet onsectetur adipisicing elit.</a>
+                                        <a href="{% url 'blog:single-blog' %}">Lorem ipsum dolor sit amet onsectetur adipisicing elit.</a>
                                         <div class="blog-date">22 FEB 2018</div>
                                     </div>
                                 </li>
@@ -244,7 +183,7 @@
                                 <li>
                                     <span style="background-image: url('{% static 'assets/images/blog/img-3.jpg' %}')"></span>
                                     <div class="blog-content">
-                                        <a href="single-blog.html">Lorem ipsum dolor sit amet onsectetur adipisicing elit.</a>
+                                        <a href="{% url 'blog:single-blog' %}">Lorem ipsum dolor sit amet onsectetur adipisicing elit.</a>
                                         <div class="blog-date">22 FEB 2018</div>
                                     </div>
                                 </li>
@@ -282,32 +221,4 @@
             </div>
         </div>
     </section>
-
-    <!-- ====== Footer Area ====== -->
-    <footer class="footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="copyright-text">
-                        <p class="text-white">&copy; 2018 <a href="https://www.begindot.com/">A Template Designed by Begindot</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ====== // Footer Area ====== -->
-
-
-    <!-- ====== ALL JS ====== -->
-    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'assets/js/lightbox.min.js' %}"></script>
-    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.mixitup.js' %}"></script>
-    <script src="{% static 'assets/js/wow.min.js' %}"></script>
-    <script src="{% static 'assets/js/typed.js' %}"></script>
-    <script src="{% static 'assets/js/main.js' %}"></script>
-
-</body>
-
-</html>
+{% endblock %}

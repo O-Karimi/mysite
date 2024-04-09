@@ -63,7 +63,7 @@ db.sqlite3-journal
 
 # Flask stuff:
 instance/
-.webassets-cache
+.web{% static 'assets-cache
 
 # Scrapy stuff:
 .scrapy
@@ -140,8 +140,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-.dmypy.json
-dmypy.json
+.dmypy.js' %}on
+dmypy.js' %}on
 
 # Pyre type checker
 .pyre/
